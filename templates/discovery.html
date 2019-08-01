@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="" method="post">
+    请输入关键字
+    <input type="text" name="key"  >
+    <input type="submit" value="搜索">
+</form>
+{% if keyword %}
+    {{ keyword }}<br>
+    {% for k,v in link.items() %}
+        <a href="{{ v }}" target="_blank"> {{ k }}</a> <br>
+    {% endfor %}
+{% endif %}
+
+</body>
+</html>
